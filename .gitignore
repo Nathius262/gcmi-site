@@ -1,0 +1,4 @@
+__pycache__
+cdn/
+db.sqlite3
+.env
