@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    
+    # main app
+    "backend.authentication.apps.AuthenticationConfig",
 ]
 
 MIDDLEWARE = [
@@ -59,7 +62,7 @@ ROOT_URLCONF = "app_settings.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, "frontend/")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -115,8 +118,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
+MEDIA_URL = "media/"
+
+STATIC_ROOT = os.path.join(BASE_DIR, "backend/" "cdn/" "static_cdn")
+MEDIA_ROOT = os.path.join(BASE_DIR, "backend/" "cdn/" "media_cdn")
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "frontend/" "assets/"),
+    os.path.join(BASE_DIR, "frontend/" "assets/" "media/")
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+AUTH_USER_MODEL = "authentication.CustomUser"
