@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">    
+    <meta name="author" content="gcmi">
+    <meta name="description" content="Glory Carriers Ministry International">
+    <meta name="keywords" content="gcmi, glory carriers ministry">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gcmi</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="{% static 'bootstrap-5.3.1-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.3.1-dist/css/bootstrap.css' %}">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="{% static 'fontawesome/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome/css/brands.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome/css/solid.css' %}">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+
+    <link rel="icon" href="{% static '/img/logo.png' %}" type="image/png"  sizes="16x16" />
+</head>
+<body>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="{% static 'app.js' %}"></script>
+    <script src="{% static 'bootstrap-5.3.1-dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap-5.3.1-dist/js/bootstrap.js' %}"></script>
+</body>
+</html>
