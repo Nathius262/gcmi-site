@@ -1,0 +1,67 @@
+:root{
+    --gold:rgb(208, 167, 49);
+    --bg-blue: rgb(31, 31, 54);
+}
+
+h2, h3, h4{
+    color: var(--bg-blue) !important;
+}
+.navbar-dark{
+    background-color: var(--bg-blue) !important;
+}
+
+.background-overlay {
+    position: absolute;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #49066D00 17%, #380356 100%);
+    opacity: 0.95;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.background-slideshow {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.heading{
+    background: linear-gradient(to top, #39383fba, #18131ccc), url("img/2.jpg") no-repeat top center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section-margin-top{
+    margin-top: 100px;
+
+}
+.section-margin-buttom{
+    margin-bottom: 100px;
+}
+
+.section2 .col .card button{
+    position: absolute;
+    top: 80%;
+    left: 43%;
+    text-align: center;
+}
+
+
+
+@media only screen and (min-width:566px) {
+    .heading{
+        min-height: 700px;
+    }
+    .heading-inner{
+        position: absolute;
+        top: 60%;
+        left: 5%;
+    }
+    
+}
